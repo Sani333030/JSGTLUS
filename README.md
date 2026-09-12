@@ -92,9 +92,86 @@ external dependencies.
 
 ## Possible next steps
 
-- Add a variance-checker module that flags unexpected period-over-period
-  swings in each investment vehicle's partner-reported financials
-  (mirrors reviewing GP-prepared reports before they're booked)
 - Support equity-method income pickup (parent's share of each vehicle's
   net income) rather than a flat elimination
 - Add a `--period` argument to run this against a rolling close calendar
+
+---
+
+# Module 2: Partner-Reported Financials Variance Checker
+
+Investment vehicles are often managed day-to-day by an external investment
+partner (a GP/property manager) who periodically sends financial reports
+back to the parent company. Before those numbers get booked, someone has to
+sanity-check them -- does this quarter's activity look reasonable compared to
+last quarter, or does something need to be questioned before it's accepted?
+
+## Problem
+
+Reviewing partner-prepared financials by eye across several entities and
+several line items each is slow, and it's easy for a real anomaly to slip
+through if nobody happens to eyeball that specific line closely enough.
+Meanwhile, drafting the actual "can you explain this" email to the partner
+still has to happen for every real variance found.
+
+## What it does
+
+`variance_checker.py` reads `partner_reported_financials.csv` (line items by
+entity and period) and, for each entity:
+
+1. Compares the two most recent reporting periods, line item by line item
+2. Also computes Net Operating Income (Rental Income minus all expense
+   lines) for both periods, since a variance can hide inside NOI even when
+   no single line item looks alarming on its own
+3. Flags anything that moves by more than **15% and more than $5,000**
+   (both conditions, so a tiny account with a big percentage swing on
+   trivial dollars doesn't create noise)
+4. Drafts the actual clarification question an accountant would send back
+   to the investment partner for every flagged item
+
+## Time saved
+
+Turns "manually scan every line of every partner report and do the
+percentage math by hand" into a single run that hands back a short, ranked
+list of exactly what needs a follow-up email -- with the email already
+drafted.
+
+## How to run it
+
+```bash
+python variance_checker.py
+```
+
+Reads `sample_data/partner_reported_financials.csv`, writes
+`sample_output/variance_flags.csv` and `sample_output/clarification_requests.csv`,
+and prints a summary to the console.
+
+## Sample output
+
+```
+Investment Vehicle Alpha LLC     Repairs & Maintenance                 8,000 ->     28,000 ( 250.0%)  [FLAGGED]
+Investment Vehicle Alpha LLC     Net Operating Income (computed)      89,000 ->     70,600 ( -20.7%)  [FLAGGED]
+Investment Vehicle Bravo LLC     Rental Income                       140,000 ->     98,000 ( -30.0%)  [FLAGGED]
+Investment Vehicle Bravo LLC     Net Operating Income (computed)     104,000 ->     61,600 ( -40.8%)  [FLAGGED]
+
+=== Clarification Requests (4) ===
+- [Investment Vehicle Alpha LLC] Can you provide detail on the increase in Repairs & Maintenance for Investment Vehicle Alpha LLC in 2025-Q2 ($8,000 in 2025-Q1 to $28,000 in 2025-Q2, a 250.0% change)?
+- [Investment Vehicle Bravo LLC] Can you provide detail on the decrease in Rental Income for Investment Vehicle Bravo LLC in 2025-Q2 ($140,000 in 2025-Q1 to $98,000 in 2025-Q2, a -30.0% change)?
+```
+
+The sample data has two anomalies seeded in on purpose (Alpha's repair
+costs, Bravo's rental income) -- the tool catches both, and correctly leaves
+Charlie's clean quarter unflagged.
+
+## Tech used
+
+Python 3, standard library only (`csv`, `collections`) -- no external
+dependencies.
+
+## Possible next steps
+
+- Compare against a budget/pro forma instead of just the prior period
+- Feed flagged items into Module 1's consolidation as a "hold for review"
+  status before they're booked
+- Add a simple email draft export (`.eml` or plain text) per clarification
+  request

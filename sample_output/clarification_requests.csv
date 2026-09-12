@@ -1,0 +1,5 @@
+entity,account_name,dollar_variance,percent_variance,suggested_question
+Investment Vehicle Alpha LLC,Repairs & Maintenance,20000.0,250.0,"Can you provide detail on the increase in Repairs & Maintenance for Investment Vehicle Alpha LLC in 2025-Q2 ($8,000 in 2025-Q1 to $28,000 in 2025-Q2, a 250.0% change)?"
+Investment Vehicle Alpha LLC,Net Operating Income (computed),-18400.0,-20.7,"Can you provide detail on the decrease in Net Operating Income (computed) for Investment Vehicle Alpha LLC in 2025-Q2 ($89,000 in 2025-Q1 to $70,600 in 2025-Q2, a -20.7% change)?"
+Investment Vehicle Bravo LLC,Rental Income,-42000.0,-30.0,"Can you provide detail on the decrease in Rental Income for Investment Vehicle Bravo LLC in 2025-Q2 ($140,000 in 2025-Q1 to $98,000 in 2025-Q2, a -30.0% change)?"
+Investment Vehicle Bravo LLC,Net Operating Income (computed),-42400.0,-40.8,"Can you provide detail on the decrease in Net Operating Income (computed) for Investment Vehicle Bravo LLC in 2025-Q2 ($104,000 in 2025-Q1 to $61,600 in 2025-Q2, a -40.8% change)?"

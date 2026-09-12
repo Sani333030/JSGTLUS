@@ -1,0 +1,37 @@
+entity,period,account_name,amount
+Investment Vehicle Alpha LLC,2025-Q1,Rental Income,120000
+Investment Vehicle Alpha LLC,2025-Q1,Management Fees,6000
+Investment Vehicle Alpha LLC,2025-Q1,Repairs & Maintenance,8000
+Investment Vehicle Alpha LLC,2025-Q1,Insurance,4000
+Investment Vehicle Alpha LLC,2025-Q1,Property Taxes,10000
+Investment Vehicle Alpha LLC,2025-Q1,Utilities,3000
+Investment Vehicle Alpha LLC,2025-Q2,Rental Income,122000
+Investment Vehicle Alpha LLC,2025-Q2,Management Fees,6100
+Investment Vehicle Alpha LLC,2025-Q2,Repairs & Maintenance,28000
+Investment Vehicle Alpha LLC,2025-Q2,Insurance,4100
+Investment Vehicle Alpha LLC,2025-Q2,Property Taxes,10000
+Investment Vehicle Alpha LLC,2025-Q2,Utilities,3200
+Investment Vehicle Bravo LLC,2025-Q1,Rental Income,140000
+Investment Vehicle Bravo LLC,2025-Q1,Management Fees,7000
+Investment Vehicle Bravo LLC,2025-Q1,Repairs & Maintenance,9000
+Investment Vehicle Bravo LLC,2025-Q1,Insurance,4500
+Investment Vehicle Bravo LLC,2025-Q1,Property Taxes,12000
+Investment Vehicle Bravo LLC,2025-Q1,Utilities,3500
+Investment Vehicle Bravo LLC,2025-Q2,Rental Income,98000
+Investment Vehicle Bravo LLC,2025-Q2,Management Fees,7000
+Investment Vehicle Bravo LLC,2025-Q2,Repairs & Maintenance,9200
+Investment Vehicle Bravo LLC,2025-Q2,Insurance,4600
+Investment Vehicle Bravo LLC,2025-Q2,Property Taxes,12000
+Investment Vehicle Bravo LLC,2025-Q2,Utilities,3600
+Investment Vehicle Charlie LLC,2025-Q1,Rental Income,100000
+Investment Vehicle Charlie LLC,2025-Q1,Management Fees,5000
+Investment Vehicle Charlie LLC,2025-Q1,Repairs & Maintenance,6000
+Investment Vehicle Charlie LLC,2025-Q1,Insurance,3000
+Investment Vehicle Charlie LLC,2025-Q1,Property Taxes,8000
+Investment Vehicle Charlie LLC,2025-Q1,Utilities,2500
+Investment Vehicle Charlie LLC,2025-Q2,Rental Income,103000
+Investment Vehicle Charlie LLC,2025-Q2,Management Fees,5100
+Investment Vehicle Charlie LLC,2025-Q2,Repairs & Maintenance,6300
+Investment Vehicle Charlie LLC,2025-Q2,Insurance,3050
+Investment Vehicle Charlie LLC,2025-Q2,Property Taxes,8000
+Investment Vehicle Charlie LLC,2025-Q2,Utilities,2600
