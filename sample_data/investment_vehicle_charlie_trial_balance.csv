@@ -1,0 +1,8 @@
+entity,account_code,account_name,account_type,debit,credit
+Investment Vehicle Charlie LLC,1000,Cash,Asset,45000,0
+Investment Vehicle Charlie LLC,1500,Real Estate Property,Asset,900000,0
+Investment Vehicle Charlie LLC,1600,Due from TLUS,Asset,20000,0
+Investment Vehicle Charlie LLC,2500,Mortgage Payable,Liability,0,700000
+Investment Vehicle Charlie LLC,3000,Member's Equity - TLUS,Equity,0,200000
+Investment Vehicle Charlie LLC,4000,Rental Income,Revenue,0,100000
+Investment Vehicle Charlie LLC,5000,Property Operating Expenses,Expense,35000,0

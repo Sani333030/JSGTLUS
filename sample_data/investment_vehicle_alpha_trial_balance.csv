@@ -1,0 +1,8 @@
+entity,account_code,account_name,account_type,debit,credit
+Investment Vehicle Alpha LLC,1000,Cash,Asset,80000,0
+Investment Vehicle Alpha LLC,1500,Real Estate Property,Asset,2000000,0
+Investment Vehicle Alpha LLC,2000,Due to TLUS,Liability,0,155000
+Investment Vehicle Alpha LLC,2500,Mortgage Payable,Liability,0,1400000
+Investment Vehicle Alpha LLC,3000,Member's Equity - TLUS,Equity,0,500000
+Investment Vehicle Alpha LLC,4000,Rental Income,Revenue,0,120000
+Investment Vehicle Alpha LLC,5000,Property Operating Expenses,Expense,95000,0

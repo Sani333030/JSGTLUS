@@ -1,0 +1,8 @@
+entity,account_code,account_name,account_type,debit,credit
+Investment Vehicle Bravo LLC,1000,Cash,Asset,60000,0
+Investment Vehicle Bravo LLC,1500,Real Estate Property,Asset,1800000,0
+Investment Vehicle Bravo LLC,2000,Accounts Payable,Liability,0,30000
+Investment Vehicle Bravo LLC,2500,Mortgage Payable,Liability,0,1330000
+Investment Vehicle Bravo LLC,3000,Member's Equity - TLUS,Equity,0,300000
+Investment Vehicle Bravo LLC,4000,Rental Income,Revenue,0,280000
+Investment Vehicle Bravo LLC,5000,Property Operating Expenses,Expense,80000,0

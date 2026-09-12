@@ -1,0 +1,12 @@
+entity,account_code,account_name,account_type,debit,credit
+TLUS,1000,Cash,Asset,500000,0
+TLUS,1100,Due from Investment Vehicle Alpha LLC,Asset,150000,0
+TLUS,1150,Investment in Investment Vehicle Alpha LLC,Asset,500000,0
+TLUS,1160,Investment in Investment Vehicle Bravo LLC,Asset,300000,0
+TLUS,1170,Investment in Investment Vehicle Charlie LLC,Asset,200000,0
+TLUS,2000,Accounts Payable,Liability,0,50000
+TLUS,2100,Due to Investment Vehicle Charlie LLC,Liability,0,20000
+TLUS,3000,Common Stock,Equity,0,400000
+TLUS,3100,Retained Earnings,Equity,0,1085000
+TLUS,4000,Management Fee Income,Revenue,0,190000
+TLUS,5000,Operating Expenses,Expense,95000,0
